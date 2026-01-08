@@ -1,5 +1,5 @@
 # Spyware
-This is a spyware which does keylogging and screenshots 10 minutes every 3 hours and sends them to an email by its default configurations . it is made only using python and you must edit the codes and put your email and its app password .
+This is a spyware which does webcam recording + microphone recording + keylogging and screenshots 10 minutes every 3 hours and sends them to an email by its default configurations . it is made only using python and you must edit the codes and put your email and its app password .
 what you must edit in the codes : 
   1. remove my email in the codes and put yours
   2. remove my email app password in the codes and put yours
