@@ -126,6 +126,8 @@ https://ronny12345-art.github.io/ronnyrogers.dev/
 Ronny Rogers
 💻 Developer | 🛡️ Cybersecurity Specialist | ⚡ Pentester
 
+Developer's Website: https://temp-wgktoqotyspoddhwlaln.webadorsite.com/?_gl=1*7vsbd1*_gcl_au*MTczNzc2NDMwMC4xNzY4NjQwODQxLjEzNjc2OTI1MDguMTc2ODY0MDk3MC4xNzY4NjQwOTY5*_ga*MjAyNzI3NjcyMS4xNzY4NjQwNzk2*_ga_E6PZPGE4QM*czE3Njg2NDA3OTQkbzEkZzEkdDE3Njg2NDM5NDkkajYwJGwwJGgyMDMzMTI1NTUz
+
 Purpose: To facilitate learning about surveillance detection
 Goal: Improve defensive security measures
 Ethics: Privacy and consent always come first
